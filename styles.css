@@ -1,0 +1,484 @@
+/* Google Font: Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Global Font and Base Styling */
+html, body, [class*="css"] {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #334155;
+}
+
+/* Multi-color soft gradient background across the entire Streamlit app */
+.stApp {
+    background: linear-gradient(135deg, #EEF2FF 0%, #ECFEFF 50%, #FDF2F8 100%) fixed !important;
+}
+
+/* Hide default streamlit top header decoration */
+header[data-testid="stHeader"] {
+    background-color: transparent !important;
+}
+
+/* Main Container spacing */
+.block-container {
+    padding-top: 1.5rem !important;
+    padding-bottom: 3rem !important;
+    max-width: 1050px !important;
+}
+
+/* Disclaimer Banner */
+.disclaimer-banner {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-left: 4px solid #14B8A6;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.disclaimer-text {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #1E293B;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Hero Header with Deep Indigo/Navy Gradient and Subtle Radial Glows */
+.hero-header {
+    background: radial-gradient(circle at 85% 20%, rgba(20, 184, 166, 0.3) 0%, transparent 45%),
+                radial-gradient(circle at 10% 80%, rgba(99, 102, 241, 0.25) 0%, transparent 40%),
+                linear-gradient(135deg, #1E1B4B 0%, #312E81 50%, #0F766E 100%);
+    color: #FFFFFF;
+    padding: 2.25rem 2rem;
+    border-radius: 18px;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 25px -5px rgba(30, 27, 75, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-title {
+    font-size: 2.1rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.5rem 0;
+    color: #FFFFFF;
+}
+
+.hero-tagline {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #CBD5E1;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(20, 184, 166, 0.25);
+    border: 1px solid rgba(20, 184, 166, 0.5);
+    color: #5EEAD4;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+}
+
+/* Detected Document Type Chip */
+.doc-type-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: #EEF2FF;
+    border: 1px solid #C7D2FE;
+    color: #4338CA;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow: 0 1px 2px rgba(67, 56, 202, 0.08);
+}
+
+/* Feature Cards on Empty State */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 14px;
+    padding: 1.6rem 1.4rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -3px rgba(30, 27, 75, 0.08);
+}
+
+.feature-card-indigo {
+    border-top: 4px solid #4F46E5;
+}
+
+.feature-card-rose {
+    border-top: 4px solid #E11D48;
+}
+
+.feature-card-teal {
+    border-top: 4px solid #0D9488;
+}
+
+.feature-icon-chip-indigo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
+    font-size: 1.4rem;
+    margin-bottom: 0.85rem;
+}
+
+.feature-icon-chip-rose {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #FFF1F2 0%, #FFE4E6 100%);
+    font-size: 1.4rem;
+    margin-bottom: 0.85rem;
+}
+
+.feature-icon-chip-teal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%);
+    font-size: 1.4rem;
+    margin-bottom: 0.85rem;
+}
+
+.feature-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1E293B;
+    margin: 0 0 0.5rem 0;
+}
+
+.feature-desc {
+    font-size: 0.88rem;
+    color: #64748B;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Empty State Callout */
+.upload-hint-box {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border: 2px dashed #94A3B8;
+    border-radius: 14px;
+    padding: 2rem;
+    text-align: center;
+    color: #475569;
+    margin-top: 1rem;
+}
+
+.upload-hint-title {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #1E293B;
+    margin-bottom: 0.5rem;
+}
+
+/* Summary Container */
+.summary-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    margin-top: 1rem;
+    line-height: 1.7;
+}
+
+/* Risky Clause Cards */
+.risk-count-header {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.risk-count-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1E293B;
+    margin: 0;
+}
+
+.risk-card {
+    border-radius: 14px;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+    border-left: 6px solid transparent;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.15s ease;
+}
+
+.risk-card:hover {
+    transform: translateY(-2px);
+}
+
+/* High Risk Theme */
+.risk-card-high {
+    background-color: #FEF2F2;
+    border: 1px solid #FCA5A5;
+    border-left: 6px solid #DC2626;
+}
+
+/* Medium Risk Theme */
+.risk-card-medium {
+    background-color: #FFFBEB;
+    border: 1px solid #FCD34D;
+    border-left: 6px solid #D97706;
+}
+
+/* Low Risk Theme */
+.risk-card-low {
+    background-color: #F0FDF4;
+    border: 1px solid #86EFAC;
+    border-left: 6px solid #16A34A;
+}
+
+/* Risk Badges */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.65rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.badge-high {
+    background-color: #DC2626;
+    color: #FFFFFF;
+}
+
+.badge-medium {
+    background-color: #D97706;
+    color: #FFFFFF;
+}
+
+.badge-low {
+    background-color: #16A34A;
+    color: #FFFFFF;
+}
+
+.badge-page {
+    background-color: #E2E8F0;
+    color: #475569;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+/* Clause text inside risk card */
+.clause-quote {
+    font-family: inherit;
+    font-style: italic;
+    color: #1E293B;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 0.85rem 1rem;
+    border-radius: 8px;
+    margin: 0.75rem 0 1rem 0;
+    border-left: 3px solid #94A3B8;
+    line-height: 1.5;
+}
+
+.clause-section-label {
+    font-weight: 700;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #475569;
+    margin-bottom: 0.25rem;
+}
+
+.clause-section-content {
+    font-size: 0.95rem;
+    color: #1E293B;
+    line-height: 1.55;
+    margin-bottom: 0.75rem;
+}
+
+.what-to-ask-box {
+    background: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    margin-top: 0.5rem;
+}
+
+.what-to-ask-title {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #0F766E;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 0.25rem;
+}
+
+/* Sidebar with Deep Indigo to Violet Gradient */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #1E1B4B 0%, #2E1065 60%, #1E1B4B 100%) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+section[data-testid="stSidebar"] * {
+    color: #F8FAFC;
+}
+
+section[data-testid="stSidebar"] .stSelectbox label,
+section[data-testid="stSidebar"] .stFileUploader label {
+    color: #E2E8F0 !important;
+    font-weight: 600;
+}
+
+/* Ensure inputs inside sidebar have crisp white backgrounds with dark text for maximum readability */
+section[data-testid="stSidebar"] div[data-baseweb="select"] > div,
+section[data-testid="stSidebar"] section[data-testid="stFileUploaderDropzone"] {
+    background-color: #FFFFFF !important;
+    border-radius: 10px !important;
+}
+
+section[data-testid="stSidebar"] div[data-baseweb="select"] * {
+    color: #1E1B4B !important;
+    -webkit-text-fill-color: #1E1B4B !important;
+}
+
+section[data-testid="stSidebar"] section[data-testid="stFileUploaderDropzone"] * {
+    color: #334155 !important;
+}
+
+.sidebar-title {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #FFFFFF !important;
+    margin-bottom: 0.25rem;
+}
+
+.sidebar-tagline {
+    font-size: 0.85rem;
+    color: #CBD5E1 !important;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.step-flow {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    margin-bottom: 0.75rem;
+}
+
+.step-item:last-child {
+    margin-bottom: 0;
+}
+
+.step-num {
+    background: #14B8A6;
+    color: #FFFFFF !important;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.step-text {
+    font-size: 0.85rem;
+    color: #E2E8F0 !important;
+    line-height: 1.4;
+}
+
+.step-text strong {
+    color: #FFFFFF !important;
+}
+
+/* Responsive Rules for Mobile */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 1.6rem;
+    }
+    
+    .hero-header {
+        padding: 1.5rem 1.25rem;
+    }
+    
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .risk-card {
+        padding: 1.15rem;
+    }
+}
+
+section[data-testid="stSidebar"] div[data-baseweb="select"] > div {
+    background: #FFFFFF !important;
+}
+section[data-testid="stSidebar"] div[data-baseweb="select"] * {
+    color: #1E1B4B !important;
+    -webkit-text-fill-color: #1E1B4B !important;
+}
+section[data-testid="stSidebar"] div[data-baseweb="select"] input,
+section[data-testid="stSidebar"] div[data-baseweb="select"] input *,
+section[data-testid="stSidebar"] [data-testid="stSelectbox"] input,
+section[data-testid="stSidebar"] [data-testid="stSelectbox"] input * {
+    color: #1E1B4B !important;
+    -webkit-text-fill-color: #1E1B4B !important;
+}
